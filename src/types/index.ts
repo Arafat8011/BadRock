@@ -11,6 +11,7 @@ export interface ProductTypes {
   description: string,
   image: string,
   specifications: ProductSpecifications,
+  quantity: number,
 }
 export interface ProductSpecifications {
   processor: string,

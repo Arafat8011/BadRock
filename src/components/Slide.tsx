@@ -60,7 +60,7 @@ const Slide = () => {
 
   return (
     <>
-      <div className="grid md:grid-cols-3 grid-rows-2 gap-2 object-cover">
+      <div className="mt-[76px] grid md:grid-cols-3 grid-rows-2 gap-2 object-cover overflow-hidden ">
         <div className={`col-span-2 row-span-2 relative overflow-hidden`}>
           {images.map((img, index) => (
             <div key={index} className={`absolute transition-opacity duration-700 
@@ -68,8 +68,8 @@ const Slide = () => {
               <img src={img.url} alt="" />
             </div>
           ))}
-          <button className="absolute left-8 top-1/2 cursor-pointer text-primary hover:bg-button-hover hover:text-primary-fg hover:rounded-full active:bg-button-active hover:scale-110 active:scale-95" onClick={() => prevSlide()}><ArrowLeft size={30} /></button>
-          <button className="absolute right-8 top-1/2 cursor-pointer text-primary hover:bg-button-hover hover:text-primary-fg hover:rounded-full active:bg-button-active hover:scale-110 active:scale-95" onClick={() => nextSlide()}><ArrowRight size={30} /></button>
+          <button className="absolute left-8 top-1/2 cursor-pointer text-color-primary hover:bg-color-button-hover hover:text-color-primary-fg hover:rounded-full active:bg-color-button-active hover:scale-110 active:scale-95" onClick={() => prevSlide()}><ArrowLeft size={30} /></button>
+          <button className="absolute right-8 top-1/2 cursor-pointer text-color-primary hover:bg-color-button-hover hover:text-color-primary-fg hover:rounded-full active:bg-color-button-active hover:scale-110 active:scale-95" onClick={() => nextSlide()}><ArrowRight size={30} /></button>
         </div>
         <img className="h-auto max-w-full w-full mx-auto overflow-hidden " src="/slide/test.jpg" alt="" />
         <img className="h-auto max-w-full w-full mx-auto overflow-hidden " src="/slide/test.jpg" alt="" />
