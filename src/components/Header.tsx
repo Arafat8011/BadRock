@@ -7,6 +7,7 @@ import { Menu, X, User, Info, Mail, Sun, Moon } from 'lucide-react';
 import { categories } from "@/data/menuItems"
 import { useTheme } from '@/context/ThemeContext';
 
+
 const Header = () => {
   const { cart } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,48 +18,50 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <div className="bg-color-primary text-color-primary-fg p-4 flex justify-between items-center">
-        <div className="flex items-center">
+    <header className='bg-color-primary text-color-primary-fg p-4'>
+      <div className=" container mx-auto flex justify-between items-center">
+        <div className="flex items-center md:container md:mx-auto">
           {/* Hamburger icon for mobile */}
           <div className="md:hidden mr-4">
             <button onClick={toggleMobileMenu} className="text-color-primary-fg focus:outline-none">
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-          <Link href="/" className="text-2xl font-bold">BadRock</Link>
+          {/* Logo */}
+          <Link href="/" className="h-full max-w-[48px] w-full">
+            <img src="/logo.png" alt='Logo' />
+          </Link>
         </div>
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center space-x-6">
+
+        </nav>
+        <div className="flex items-center gap-3">
           <Link href="/about" className="flex items-center hover:underline">
-            <Info size={20} className="mr-1" /> About
+            <Info size={20} className="mr-1" />
           </Link>
           <Link href="/contact" className="flex items-center hover:underline">
-            <Mail size={20} className="mr-1" /> Contact
+            <Mail size={20} className="mr-1" />
           </Link>
           <Link href="/login" className="flex items-center hover:underline">
-            <User size={20} className="mr-1" /> Login/Register
+            <User size={20} className="mr-1" />
           </Link>
-        </nav>
-        <div className="flex items-center">
-          {/* Theme Toggle Button */}
-          <button onClick={toggleTheme} className="text-color-primary-fg focus:outline-none mr-4">
-            {theme === 'light' ? <Moon size={24} /> : <Sun size={24} />}
-          </button>
-          <Link href="/cart" className="relative ml-4 flex items-center">
+
+          <Link href="/cart" className="relative flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
             {cart.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-color-error text-color-primary-fg rounded-full px-2 py-1 text-xs">{cart.length}</span>
+              <span className="absolute -top-2 bg-color-error text-color-primary-fg rounded-full text-xs">{cart.length}</span>
             )}
           </Link>
+          {/* Theme Toggle Button */}
+          <button onClick={toggleTheme} className="text-color-primary-fg focus:outline-none cursor-pointer">
+            {theme === 'light' ? <Moon size={24} /> : <Sun size={24} />}
+          </button>
         </div>
       </div>
-      {/* Desktop Dropdown */}
-      <div className="hidden md:block">
-        <Dropdown />
-      </div>
+  
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (

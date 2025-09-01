@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CategoryDropdown() {
     return (
-        <div className="w-full text-left bg-color-primary text-color-primary-fg hidden md:block shadow-color-card-shadow" >
+        <div className="w-full text-left bg-color-primary/75 font-semibold text-color-primary-fg hidden md:block shadow-color-card-shadow" >
             <ul className="containe flex justify-center text-center">
                 {categories.map((menu, index) => (
                     <li key={index} className="py-1 w-56 text-color-primary-fg  hover:bg-color-primary/80 group relative">
