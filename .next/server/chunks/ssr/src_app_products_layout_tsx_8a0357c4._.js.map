@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["file:///home/anower/repo/javascript/next/BadRock/src/app/products/layout.tsx"],"sourcesContent":["import { ReactNode } from 'react'\n\nexport default function ProductLayout({ children }: { children: ReactNode }) {\n  return (\n    <div>\n      <section className='pt-[56px] md:pt-[92px]'>\n        {children}\n      </section>\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;;AAEe,SAAS,cAAc,EAAE,QAAQ,EAA2B;IACzE,qBACE,8OAAC;kBACC,cAAA,8OAAC;YAAQ,WAAU;sBAChB;;;;;;;;;;;AAIT","debugId":null}}]
-}

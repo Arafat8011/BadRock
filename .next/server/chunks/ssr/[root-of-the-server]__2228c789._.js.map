@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/anower/repo/javascript/next/BadRock/src/app/contact/page.tsx"],"sourcesContent":["export default function Contact() {\n  return (\n    <div className=\"flex items-center h-[100vh]\">\n      <h1 className=\"text-4xl\">Contact Us</h1>\n    </div>\n  );\n}"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAG,WAAU;sBAAW;;;;;;;;;;;AAG/B","debugId":null}}]
-}
